@@ -8,7 +8,7 @@ import {useState,useEffect} from 'react'
 console.log('Navbar Assets:', assets);
 function Navbar() {
     return (
-        <div className='py-5 flex justify-between items-center'  style={{ marginTop: '-100px', marginLeft: '-200px' }}>
+        <div className='py-5 flex justify-between items-center  '  style={{ marginTop: '-100px', marginLeft: '-200px'}}>
             <img src={assets.logo} alt="Logo" className='logo'/>
             <div style={{ marginTop: '-100px'}}>
             <ul className="flex list-none gap-20" style={{ fontSize: '20px' }}>
