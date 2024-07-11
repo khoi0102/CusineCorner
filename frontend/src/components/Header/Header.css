@@ -3,10 +3,12 @@
 @tailwind utilities;
 .header {
     height: 34vw;
-    margin: 20px auto;
+    margin-top:-100px;
     background: url('/header_img.png') no-repeat;
     background-size: contain;
     position: relative;
+    border-radius: 20px;
+
 
 }
 .header-contents {
