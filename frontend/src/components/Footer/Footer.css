@@ -1,0 +1,88 @@
+.footer {
+    color: #d9d9d9;
+    background-color: #323232;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    height:220px;
+    margin-top:20px;
+    padding-top:20px;
+    padding-bottom:0
+
+}
+
+.footer-content {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px; /* Adjusted gap between columns */
+}
+
+.footer-content-left, .footer-content-right, .footer-content-center {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height:50px;
+    gap: 10px; /* Adjusted gap between items */
+    margin-bottom:0px
+
+}
+
+.footer-content-left li, .footer-content-right li, .footer-content-center li {
+    list-style: none;
+    margin-bottom: 10px; /* Consistent margin for list items */
+}
+
+.footer-logo {
+    position: relative;
+    bottom: 120px; /* Adjusted to remove gap */
+    margin-bottom:0; /* Ensure no margin at the bottom of the logo */
+}
+
+.footer-content-left p {
+    margin-top: 0; /* Ensure no margin at the top of the paragraph */
+}
+
+.footer-social-icons {
+    display: flex;
+    gap: 50px; /* Add gap between social icons */
+}
+
+.footer-social-icons img {
+    margin: 5px; /* Added some margin to social icons if needed */
+}
+
+hr {
+    width: 100%;
+    border: 1px solid #d9d9d9;
+    margin: 10px 0;
+}
+
+.footer-copyright {
+    margin: 0; /* Ensure no margin at the bottom */
+}
+.footer-social-description{
+    position:relative;
+    bottom:180px;
+    gap:20px;
+    display:grid;
+    padding-left:20px
+
+}
+.footer-copyright {
+    position:relative;
+    bottom:100px
+}
+.footer-content-right h2, .footer-content-center h2 {
+    color:white;
+    font-size:25px
+}
+.footer-social-icons{
+    display:flex;
+    flex-direction: row;}
+.footer-logo img{
+    height:250px;
+    position:relative;
+    top:40px
+}
