@@ -1,3 +1,75 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.navbar {
+    padding-top: 1.25rem; /* py-5 */
+    padding-bottom: 1.25rem;
+    display: flex; /* flex */
+    justify-content: space-between; /* justify-between */
+    align-items: center; /* items-center */
+}
+
+.navbar-menu {
+    display: flex; /* flex */
+    list-style: none; /* list-none */
+    gap: 5rem; /* gap-20 */
+}
+
+.navbar-right {
+    display: flex; /* flex */
+    align-items: center; /* items-center */
+    gap: 2.5rem; /* gap-10 */
+}
+
+.navbar button {
+    background-color: transparent; /* bg-transparent */
+    border: 1px solid #f97316; /* border, border-solid, border-orange-500 */
+    padding: 10px 30px; /* p-[10px_30px] */
+    border-radius: 50px; /* rounded-[50px] */
+    cursor: pointer; /* cursor-pointer */
+    font-size:16px
+}
+
+.navbar button:hover {
+    background-color: #f97316; /* hover:bg-orange-500 */
+    color: white; /* hover:text-white */
+}
+
+.navbar .active {
+    padding-bottom: 2px;
+    border-bottom: 2px solid #49557e;
+
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+.navbar-search-icon {
+    position: relative;
+    cursor: pointer;
+
+}
+
+.navbar-search-icon .dot {
+    position: absolute;
+    min-width: 10px;
+    min-height: 10px;
+    background-color: tomato;
+    border-radius: 5px;
+    top: -5px;
+    right: -8px;
+    cursor: pointer;
+}
+
+.navbar-right .search-icon, .navbar-right .basket-icon {
+    font-size: 2.25rem;
+}
+
+@media (max-width: 450px) {
+    .navbar-menu {
+        display:none;
+    }
+
+}
