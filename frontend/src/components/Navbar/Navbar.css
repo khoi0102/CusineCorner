@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .navbar {
-    padding-top: 1.25rem; /* py-5 */
+    padding-top: 30px; /* py-5 */
     padding-bottom: 1.25rem;
     display: flex; /* flex */
     justify-content: space-between; /* justify-between */
