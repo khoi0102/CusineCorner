@@ -16,7 +16,6 @@ function FoodDisplay({category}) {
                     }
                 })}
             </div>
-
         </div>
     );
 }
