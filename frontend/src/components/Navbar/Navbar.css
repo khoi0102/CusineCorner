@@ -1,45 +1,43 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+/* Navbar.css */
 
 .navbar {
-    padding-top: 30px; /* py-5 */
+    padding-top: 30px;
     padding-bottom: 1.25rem;
-    display: flex; /* flex */
-    justify-content: space-between; /* justify-between */
-    align-items: center; /* items-center */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap; /* Allow wrapping for smaller screens */
 }
 
 .navbar-menu {
-    display: flex; /* flex */
-    list-style: none; /* list-none */
-    gap: 5rem; /* gap-20 */
+    display: flex;
+    list-style: none;
+    gap: 5rem;
 }
 
 .navbar-right {
-    display: flex; /* flex */
-    align-items: center; /* items-center */
-    gap: 2.5rem; /* gap-10 */
+    display: flex;
+    align-items: center;
+    gap: 2.5rem;
 }
 
 .navbar button {
-    background-color: transparent; /* bg-transparent */
-    border: 1px solid #f97316; /* border, border-solid, border-orange-500 */
-    padding: 10px 30px; /* p-[10px_30px] */
-    border-radius: 50px; /* rounded-[50px] */
-    cursor: pointer; /* cursor-pointer */
-    font-size:16px
+    background-color: transparent;
+    border: 1px solid #f97316;
+    padding: 10px 30px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 16px;
 }
 
 .navbar button:hover {
-    background-color: #f97316; /* hover:bg-orange-500 */
-    color: white; /* hover:text-white */
+    background-color: #f97316;
+    color: white;
 }
 
 .navbar .active {
     padding-bottom: 2px;
     border-bottom: 2px solid #49557e;
-
 }
 
 .navbar li {
@@ -49,7 +47,6 @@
 .navbar-search-icon {
     position: relative;
     cursor: pointer;
-
 }
 
 .navbar-search-icon .dot {
@@ -67,9 +64,30 @@
     font-size: 2.25rem;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 768px) {
     .navbar-menu {
-        display:none;
+        display: none;
     }
 
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .navbar-right {
+        margin-top: 20px;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 450px) {
+    .navbar-right .search-icon, .navbar-right .basket-icon {
+        font-size: 1.5rem;
+    }
+
+    .navbar button {
+        padding: 8px 20px;
+        font-size: 14px;
+    }
 }

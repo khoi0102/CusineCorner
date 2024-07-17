@@ -1,13 +1,15 @@
-import React, {useState} from 'react';
+import React, {useContext, useState} from 'react';
 import './Navbar.css';
 import {assets} from '../../assets/assets.js';
 import {CiSearch, CiShoppingCart} from "react-icons/ci";
 import {Link} from "react-router-dom";
+import {StoreContext} from "../../context/StoreContext.jsx";
 
 console.log('Navbar Assets:', assets);
 
 function Navbar({setShowLogin}) {
     const [menu, setMenu] = useState('home')
+    const {getTotalCartAmount}=useContext(StoreContext)
     return (
         <div className='navbar' style={{marginTop: '-100px', marginLeft: '-200px'}}>
            <Link to="/"> <img src={assets.logo} alt="Logo" className='logo'/></Link>
@@ -25,7 +27,7 @@ function Navbar({setShowLogin}) {
                 <CiSearch className="search-icon" style={{position: 'relative'}}/>
                 <div className="navbar-search-icon">
                     <Link to='/cart'><CiShoppingCart className="basket-icon"/></Link>
-                    <div className="dot"></div>
+                    <div className={getTotalCartAmount()===0?"":"dot"}></div>
                 </div>
                 <button onClick={()=>setShowLogin(true)}>sign in</button>
             </div>
