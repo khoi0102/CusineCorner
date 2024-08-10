@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import './LoginPopup.css'
 import {assets} from "../../assets/assets.js";
 
-/*FSDgergef*/
+/*FSDgergfddfbdef*/
 function LoginPopup({setShowLogin}) {
     const [currState, setCurrState] = useState("Login")
     return (
